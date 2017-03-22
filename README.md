@@ -1,5 +1,3 @@
-# elasticsearch
-study and learn elasticsearch
 # Preface
 Elasticsearch is a distributed, scalable, real-time search and analytics engine. It is used for full-text search, structured search, analytics, and all three in combination
 ## 成功案例
@@ -130,8 +128,11 @@ TBD
 ### JAVA API
 TBD
 
+### Spring Boot集成
+TBD
+
 ### RESTful Api with JSON over HTTP
-####http请求
+#### http请求
 ```shell
 curl -X<VERB> '<PROTOCOL>://<HOST>:<PORT>/<PATH>?<QUERY_STRING>' -d '<BODY>'
 ```
@@ -181,7 +182,7 @@ json作为文档序列化格式
 6. Enable management to build analytic dashboards over the data.
 
 ## Indexing Employee Documents
-### index
+### 关于index
 - Index（名词）： 一个索引就是存储相关文档的数据库
 - Index（动词）： 插入一个文档数据
 - Inverted Index：关系数据库中的索引(B-tree)
