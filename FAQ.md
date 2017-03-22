@@ -1,3 +1,22 @@
+# can not run elasticsearch as root
+elasticsearch可以在服务端执行脚本，为了安全考虑，必须使用非root用户启动
+## 添加elasticsearch用户以及用户组
+### 命令行方式
+```shell
+#添加用户级用户组
+useradd elsearch -d /home/elsearch -m -s /bin/bash -U
+#修改密码
+passwd elsearch
+```
+### 交互方式
+```shell
+adduser elsearch
+```
+## 新用户授权
+```shell
+chown -R elsearch:elsearch elasticsearch-5.2.2
+```
+
 # Ubuntu max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]
 使用root用户
 1. 修改系统配置/etc/security/limits.conf
