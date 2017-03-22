@@ -16,6 +16,12 @@ adduser elsearch
 ```shell
 chown -R elsearch:elsearch elasticsearch-5.2.2
 ```
+## 切换到新用户启动
+```shell
+su elsearch
+# elasticsearch安装目录
+./bin/elasticsearch
+```
 
 # Ubuntu max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]
 使用root用户
