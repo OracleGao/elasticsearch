@@ -33,7 +33,7 @@ be able to integrate your application with Elasticsearch
 - Distributed Search Execution
 -  Inside a Shard
 
-## You Know, for Search…（如何搭建搜索引擎）
+## [You Know, for Search…（如何搭建搜索引擎）](https://github.com/OracleGao/elasticsearch/blob/master/You%20Know%20for%20Search.md)
 
 # Structured Search
 ## 目标
