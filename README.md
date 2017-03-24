@@ -18,6 +18,8 @@ Elasticsearch is a distributed, scalable, real-time search and analytics engine.
 - model your data to take advantage of the horizontal scalability of Elasticsearch
 - configure and monitor your cluster when moving to production
 
+# [基本概念](https://github.com/OracleGao/elasticsearch/blob/master/concept.md)
+
 # Getting Started
 ## 主要目标
 be able to integrate your application with Elasticsearch
