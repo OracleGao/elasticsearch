@@ -63,10 +63,11 @@ curl -XGET 'http://localhost:9200/megacorp/employee/_search?pretty' -d '
   }
 }'
 ```
+## 关于fielddata
 fielddata 是text类型field使用的一种内存数据结构，在第一次使用聚集，排序，或脚本的查询时构建。它会从磁盘读取整个 inverted index。
 - "Which documents contain this term?" for search
 - "What is the value of this field for this document?" for aggregations
-## 默认关闭feilddata的原因
+### 默认关闭feilddata的原因
 - Fielddata会消耗大量内存堆空间
 - 装载过程会消耗大量资源，并且期间增加用户访问服务的延迟时间
 
