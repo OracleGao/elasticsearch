@@ -70,6 +70,5 @@ fielddata 是text类型field使用的一种内存数据结构，在第一次使�
 ### 默认关闭feilddata的原因
 - Fielddata会消耗大量内存堆空间
 - 装载过程会消耗大量资源，并且期间增加用户访问服务的延迟时间
-
-## reference
+### reference
 https://www.elastic.co/guide/en/elasticsearch/reference/current/fielddata.html
