@@ -51,3 +51,24 @@ EOF
 sysctl -p
 vm.max_map_count = 262144
 ```
+# Fielddata is disabled on text fields by default.  Set fielddata=true
+在field属性上使用keyword关键字查询。如下：在interests field后增加“.keyword”进行聚集处理
+```shell
+curl -XGET 'http://localhost:9200/megacorp/employee/_search?pretty' -d '
+{
+  "aggs": {
+    "all_interests": {
+      "terms": { "field": "interests.keyword" }
+    }
+  }
+}'
+```
+fielddata 是text类型field使用的一种内存数据结构，在第一次使用聚集，排序，或脚本的查询时构建。它会从磁盘读取整个 inverted index。
+- "Which documents contain this term?" for search
+- "What is the value of this field for this document?" for aggregations
+## 默认关闭feilddata的原因
+- Fielddata会消耗大量内存堆空间
+- 装载过程会消耗大量资源，并且期间增加用户访问服务的延迟时间
+
+## reference
+https://www.elastic.co/guide/en/elasticsearch/reference/current/fielddata.html
